@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Manrope';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.sidenav-content,
+.topnav-content {
+  border-radius: 20px;
+}
+
+.sidenav-btns button,
+.topnav-btns button {
+  background: transparent;
+  border: 0;
+}
+
+.sidenav-btns button:hover,
+.sidenav-btns button:focus,
+.topnav-btns button:hover,
+.topnav-btns button:focus {
+  background-color: transparent;
+}
+
+.card {
+  border: 0;
+  color: #fff;
+  background: transparent;
+  border-radius: 0%;
+}
+
+.card img {
+  border-radius: 8px;
+}
+
+.meta-dot {
+  width: 3px;
+  height: 3px;
+  background-color: rgb(255, 255, 255, 0.75);
+}
+
+.play-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.play-btn {
+  width: 120px;
+  background-color: rgb(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.bookmark-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 32px;
+  width: 32px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #10141E;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+.hover {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.form-control {
+  background-color: transparent;
+  border: 0;
+  font-size: 24px;
+}
+
+.form-control:focus {
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  box-shadow: none;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: 0;
+}
