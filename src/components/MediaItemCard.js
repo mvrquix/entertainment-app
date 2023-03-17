@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import BookmarkIcon from "./BookmarkIcon"
 
-const MediaItemCard = ({ item }) => {
+const MediaItemCard = ({ item, handleBookmark }) => {
     const [hover, onHover] = useState(false)
 
     const renderItemCategory = (category) => {
@@ -39,7 +39,7 @@ const MediaItemCard = ({ item }) => {
             onMouseLeave={() => onHover(false)}
             className="item-card col-lg-3 col-md-4 col-sm-6 mb-3">
             <div className="card">
-                <BookmarkIcon isBookmarked={item.isBookmarked} />
+                <BookmarkIcon item={item} handleBookmark={handleBookmark} />
                 <div className="position-relative">
                     <img src={item.thumbnail.regular.large} className="card-img-top" />
                     <div className={`play-overlay ${hover ? '' : 'd-none'}`}>

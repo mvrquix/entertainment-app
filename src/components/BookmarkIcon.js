@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
-const BookmarkIcon = ({ isBookmarked }) => {
+const BookmarkIcon = ({ item, handleBookmark }) => {
+    const { isBookmarked } = item
     const [hover, onHover] = useState(false)
 
     return (
         <button
+            onClick={() => handleBookmark(item)}
             onMouseEnter={() => onHover(true)}
             onMouseLeave={() => onHover(false)}
             className={`bookmark-btn ${(hover && !isBookmarked) ? 'hover' : ''}`}>

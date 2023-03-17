@@ -76,13 +76,22 @@ const EntertainmentUI = (props) => {
         })
     }
 
+    const handleBookmark = (item) => {
+        const isBookmarked = bookmarks.includes(item)
+        item.isBookmarked = !isBookmarked
+        if (!isBookmarked)
+            setBookmarks([...bookmarks, item])
+        else
+            setBookmarks(bookmarks.filter(x => x.title === item.title))
+    }
+
     const renderHome = () => {
         return (
             <div className="row">
                 <h3 className="text-white mb-3">Recommended for you</h3>
                 {
                     data.map(item => {
-                        return <MediaItemCard item={item} />
+                        return <MediaItemCard item={item} handleBookmark={handleBookmark} />
                     })
                 }
             </div>
@@ -95,7 +104,7 @@ const EntertainmentUI = (props) => {
                 <h3 className="text-white mb-3">Movies</h3>
                 {
                     movies.map(item => {
-                        return <MediaItemCard item={item} />
+                        return <MediaItemCard item={item} handleBookmark={handleBookmark} />
                     })
                 }
             </div>
@@ -108,7 +117,7 @@ const EntertainmentUI = (props) => {
                 <h3 className="text-white mb-3">TV Series</h3>
                 {
                     tv.map(item => {
-                        return <MediaItemCard item={item} />
+                        return <MediaItemCard item={item} handleBookmark={handleBookmark} />
                     })
                 }
             </div>
@@ -123,13 +132,13 @@ const EntertainmentUI = (props) => {
                 <h3 className="text-white mb-3">Bookmarked Movies</h3>
                 {
                     bookmarkedMovies.map(item => {
-                        return <MediaItemCard item={item} />
+                        return <MediaItemCard item={item} handleBookmark={handleBookmark} />
                     })
                 }
                 <h3 className="text-white mb-3">Bookmarked TV Series</h3>
                 {
                     bookmarkedTV.map(item => {
-                        return <MediaItemCard item={item} />
+                        return <MediaItemCard item={item} handleBookmark={handleBookmark} />
                     })
                 }
             </div>
@@ -143,7 +152,7 @@ const EntertainmentUI = (props) => {
                 <h3 className="text-white mb-3">Found {results.length} results for '{input}'</h3>
                 {
                     results.map(item => {
-                        return <MediaItemCard item={item} />
+                        return <MediaItemCard item={item} handleBookmark={handleBookmark} />
                     })
                 }
             </div>
