@@ -47,7 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Links
 
-- Solution URL: [https://github.com/mvrquix/markdown-editor](https://github.com/mvrquix/markdown-editor)
+- Solution URL: [https://github.com/mvrquix/entertainment-app](https://github.com/mvrquix/entertainment-app)
 - Live Site URL: [https://isaqc-entertainment.web.app/](https://isaqc-entertainment.web.app)
 
 ## My process
